@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3DVR案例馆 | 云禾空间</title>
+    <meta name="description" content="云禾空间3DVR案例馆，在线查看客厅、餐厨、卧室等装修空间效果。" />
+    <link rel="icon" href="assets/logo.jpg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img src="assets/logo.jpg" alt="云禾空间 LOGO" /><span>云禾空间</span></a>
+        <div class="city">合肥 <button type="button">切换城市</button></div>
+        <nav class="nav" aria-label="主导航">
+          <a href="index.html#packages">装修套餐</a>
+          <a href="cases.html">案例</a>
+          <a href="index.html#ai-studio">AI 效果图</a>
+          <a href="vr.html">3DVR案例</a>
+          <a href="sites.html">工地</a>
+          <a href="guide.html">攻略</a>
+        </nav>
+        <a class="phone" href="tel:18255030200">18255030200</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero-lite">
+        <p class="eyebrow">3DVR CASE</p>
+        <h1>3DVR案例馆</h1>
+        <p>在线切换客厅、餐厨、卧室、旧改等空间视角，先看全景氛围，再咨询装修方案。</p>
+      </section>
+
+      <section class="section page-section">
+        <div class="vr-layout vr-page-layout">
+          <div class="vr-viewer" id="vrViewer">
+            <img src="assets/hero-interior.png" alt="3DVR装修案例" />
+            <div class="vr-reticle"></div>
+            <button class="vr-hotspot living active" type="button" data-vr-room="客厅" data-vr-image="assets/hero-interior.png">客厅</button>
+            <button class="vr-hotspot dining" type="button" data-vr-room="餐厨" data-vr-image="assets/case-cream-home.png">餐厨</button>
+            <button class="vr-hotspot bedroom" type="button" data-vr-room="卧室" data-vr-image="assets/case-modern-flat.png">卧室</button>
+            <button class="vr-hotspot oldroom" type="button" data-vr-room="旧改" data-vr-image="assets/case-old-renovation.png">旧改</button>
+          </div>
+          <aside class="vr-info">
+            <p class="eyebrow">LIVE TOUR</p>
+            <h2 id="vrRoomTitle">现代自然客厅</h2>
+            <p id="vrRoomCopy">点击热点可切换不同空间，模拟客户在线浏览VR案例的路径。</p>
+            <ul class="vr-feature-list">
+              <li>多空间热点切换</li>
+              <li>适合案例讲解和方案预览</li>
+              <li>可与 AI 效果图联动</li>
+            </ul>
+            <div class="vr-actions">
+              <a href="index.html#ai-studio">生成同款AI效果图</a>
+              <button type="button" data-lead="预约VR案例讲解">预约讲解</button>
+            </div>
+          </aside>
+        </div>
+
+        <div class="vr-card-grid">
+          <article><img src="assets/hero-interior.png" alt="现代客厅VR案例" /><h3>现代自然三居</h3><p>客厅、餐厨、卧室全空间浏览。</p></article>
+          <article><img src="assets/case-cream-home.png" alt="奶油风VR案例" /><h3>奶油风四居</h3><p>弧形墙面与开放餐厨重点展示。</p></article>
+          <article><img src="assets/case-old-renovation.png" alt="旧改VR案例" /><h3>日式旧改二居</h3><p>玄关扩容和厨卫翻新路径展示。</p></article>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="lead-dialog" id="leadDialog">
+      <form method="dialog" class="lead-modal">
+        <button class="dialog-close" type="submit" aria-label="关闭">×</button>
+        <p class="eyebrow" id="leadEyebrow">FREE SERVICE</p>
+        <h2 id="leadTitle">预约VR案例讲解</h2>
+        <label><span>房屋面积</span><input id="modalArea" type="number" min="40" max="500" placeholder="例如 100" /></label>
+        <label><span>所在城市</span><select id="modalCity"><option>合肥</option><option>南京</option><option>苏州</option><option>芜湖</option></select></label>
+        <label><span>手机号码</span><input id="modalPhone" type="tel" placeholder="用于接收方案" /></label>
+        <div class="modal-estimate"><span>预估基础预算</span><strong id="modalBudget">--</strong></div>
+        <button class="modal-submit" type="button" id="modalSubmit">立即预约</button>
+        <small id="modalNote">可预约顾问在线讲解VR案例</small>
+      </form>
+    </dialog>
+
+    <script src="script.js"></script>
+  </body>
+</html>
