@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>装修案例 | 云禾空间</title>
+    <meta name="description" content="云禾空间装修案例库，按户型、面积、风格筛选真实装修案例。" />
+    <link rel="icon" href="assets/logo.jpg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="index.html"><img src="assets/logo.jpg" alt="云禾空间 LOGO" /><span>云禾空间</span></a>
+        <div class="city"><span class="current-city">合肥</span> <button type="button">切换城市</button></div>
+        <nav class="nav" aria-label="主导航">
+          <a href="index.html#packages">装修套餐</a>
+          <a href="cases.html">案例</a>
+          <a href="index.html#ai-studio">AI 效果图</a>
+          <a href="vr.html">3DVR案例</a>
+          <a href="sites.html">工地</a>
+          <a href="guide.html">攻略</a>
+        </nav>
+        <a class="phone" href="tel:18255030200">18255030200</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero-lite">
+        <p class="eyebrow">CASE LIBRARY</p>
+        <h1>装修案例库</h1>
+        <p>从相似户型、预算和风格里找参考，再用 AI 生成同款方向。</p>
+      </section>
+
+      <section class="section cases page-section">
+        <div class="filters">
+          <div class="filter-row">
+            <span>户型</span>
+            <button class="active" data-group="room" data-value="all" type="button">全部</button>
+            <button data-group="room" data-value="二居" type="button">二居</button>
+            <button data-group="room" data-value="三居" type="button">三居</button>
+            <button data-group="room" data-value="四居" type="button">四居</button>
+          </div>
+          <div class="filter-row">
+            <span>风格</span>
+            <button class="active" data-group="style" data-value="all" type="button">全部</button>
+            <button data-group="style" data-value="现代简约" type="button">现代简约</button>
+            <button data-group="style" data-value="奶油风" type="button">奶油风</button>
+            <button data-group="style" data-value="日式" type="button">日式</button>
+            <button data-group="style" data-value="轻法式" type="button">轻法式</button>
+          </div>
+          <div class="filter-row">
+            <span>面积</span>
+            <button class="active" data-group="area" data-value="all" type="button">全部</button>
+            <button data-group="area" data-value="80-100" type="button">80-100m²</button>
+            <button data-group="area" data-value="100-120" type="button">100-120m²</button>
+            <button data-group="area" data-value="120+" type="button">120m²以上</button>
+          </div>
+        </div>
+
+        <div class="case-toolbar"><strong>精选案例</strong><span id="caseCount">4 套案例</span></div>
+        <div class="case-grid">
+          <a class="case-card" href="case-detail.html" data-room="三居" data-style="现代简约" data-area="80-100" data-keywords="现代 三居 98 客厅 收纳">
+            <img src="assets/case-modern-flat.png" alt="98平方米现代简约三居装修案例" />
+            <div><span>98m² · 三居 · 现代简约</span><h3>电视收纳墙贯穿客餐厅，小户型也有松弛感</h3><p>半包参考 12.8 万 · 工期 78 天</p></div>
+          </a>
+          <a class="case-card" href="case-detail.html" data-room="四居" data-style="奶油风" data-area="120+" data-keywords="奶油 四居 128 餐厨">
+            <img src="assets/case-cream-home.png" alt="128平方米奶油风四居装修案例" />
+            <div><span>128m² · 四居 · 奶油风</span><h3>开放餐厨和弧形墙面，提升三代同住体验</h3><p>全包参考 26.6 万 · 工期 96 天</p></div>
+          </a>
+          <a class="case-card" href="case-detail.html" data-room="二居" data-style="日式" data-area="80-100" data-keywords="旧房 日式 二居 卫生间 改造">
+            <img src="assets/case-old-renovation.png" alt="旧房日式二居装修案例" />
+            <div><span>86m² · 二居 · 日式旧改</span><h3>玄关扩容与干湿分离，让老房重新适合居住</h3><p>翻新参考 15.2 万 · 工期 82 天</p></div>
+          </a>
+          <a class="case-card" href="case-detail.html" data-room="三居" data-style="轻法式" data-area="100-120" data-keywords="轻法式 三居 116 主卧">
+            <img src="assets/hero-interior.png" alt="116平方米轻法式三居装修案例" />
+            <div><span>116m² · 三居 · 轻法式</span><h3>石膏线背景墙和主卧套间，兼顾颜值与动线</h3><p>全包参考 22.4 万 · 工期 90 天</p></div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
